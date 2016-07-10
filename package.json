@@ -1,0 +1,22 @@
+{
+  "name": "micro-front-end-scaffold",
+  "version": "1.0.0",
+  "description": "micro-front-end-scaffold",
+  "main": "index.js",
+  "author": "Jerome Lachaud",
+  "email" : "jerome.lachaud@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run serve & npm run watch",
+    "serve": "live-server",
+    "watch": "watchify -t browserify-css src/app.js -o bundle.js --verbose"
+  },
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "browserify-css": "^0.9.1"
+  },
+  "devDependencies": {
+    "live-server": "^0.9.2",
+    "watchify": "^3.7.0"
+  }
+}
