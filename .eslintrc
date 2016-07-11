@@ -29,7 +29,7 @@
     "new-cap": 0,
     "comma-dangle": 2,
     "constructor-super": 2,
-    "no-console": 2,
+    "no-console": 1,
     "no-constant-condition": 2,
     "no-const-assign": 2,
     "no-debugger": 2,
