@@ -4,7 +4,7 @@
   "description": "micro-front-end-scaffold",
   "main": "index.js",
   "author": "Jerome Lachaud",
-  "email" : "jerome.lachaud@gmail.com",
+  "email": "jerome.lachaud@gmail.com",
   "license": "MIT",
   "scripts": {
     "start": "npm run serve & npm run watch",
