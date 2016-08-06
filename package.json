@@ -7,8 +7,8 @@
   "email": "jerome.lachaud@gmail.com",
   "license": "MIT",
   "scripts": {
-    "start": "npm run server & npm run javascript & npm run watch-scss",
-    "server": "live-server",
+    "start": "npm run javascript & npm run watch-scss & npm run server",
+    "server": "live-server --host=localhost",
     "javascript": "watchify src/index.js -o public/main.js --verbose --debug",
     "build-css": "node-sass --include-path scss src/app.scss public/main.css",
     "watch-scss": "nodemon -e scss -x \"npm run build-css\""
