@@ -1,0 +1,9 @@
+.bar {
+  top:0; right: 0; bottom: 0; left: 0;
+  position: fixed;
+  display: flex;
+  padding: 0 0 0 1rem;
+  background-color: rgb(255, 255, 255);
+  height: 2rem;
+  align-items: center;
+}
