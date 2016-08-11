@@ -1,13 +1,17 @@
 // entry point
 import fetchUrl from './src/js/fetch-url';
+import {weatherApi} from './src/js/constants';
 const moment = require('moment');
-const apiKey = '0574fdb7238ef696712ccd89746bb0e0';
-const baseUrl = 'http://api.openweathermap.org/data/2.5/weather?q=';
-const city = 'London,uk';
-const unit =  'metric';
-const url = `${baseUrl}${city}&appid=${apiKey}&units=${unit}`;
 
 fetchUrl(url)
+const {
+  baseUrl,
+  city,
+  apiKey,
+  unit
+} = weatherApi;
+const weatherUrl = `${baseUrl}${city}&appid=${apiKey}&units=${unit}`;
+
 .then((response) => {
   response = JSON.parse(response);
   console.log(response);
