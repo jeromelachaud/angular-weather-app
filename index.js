@@ -29,7 +29,6 @@ const flickrUrl = `${flickrApiBaseUrl}${method}&api_key=${flickrApiKey}&text=${t
 fetchUrl(weatherUrl)
 .then((response) => {
   response = JSON.parse(response);
-  console.log(response);
   const city = response.name;
   const humidity = response.main.humidity;
   const temp = response.main.temp;
@@ -37,7 +36,6 @@ fetchUrl(weatherUrl)
   const main = response.weather[0].main;
   const sunrise = response.sys.sunrise * 1000;
   const sunset = response.sys.sunset * 1000;
-
   const formattedSunrise = moment.parseZone(sunrise).local().format('HH:mm');
   const formattedSunset = moment.parseZone(sunset).local().format('HH:mm');
 
