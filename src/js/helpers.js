@@ -1,5 +1,5 @@
 // Fetch data with XMLHttpRequest and Promises
-export default function fetchUrl(url) {
+export function fetchUrl(url) {
   return new Promise((resolve, reject) => {
     let request = new XMLHttpRequest();
     request.open('GET', url);
