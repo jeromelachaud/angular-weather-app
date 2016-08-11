@@ -16,5 +16,6 @@ const flickrApi = {
 };
 
 export {
-  weatherApi
+  weatherApi,
+  flickrApi
 };
