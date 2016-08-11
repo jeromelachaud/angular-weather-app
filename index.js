@@ -32,3 +32,13 @@ fetchUrl(url)
   Description: ${description}
   Main: ${main}`;
 });
+
+
+// const flickrApiKey = '33ab400f91e868ecf11d36f127f29ea0';
+const flickrUrl = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=33ab400f91e868ecf11d36f127f29ea0&text=city+of+london&group_id=1074553%40N22&per_page=5&page=1&format=json&nojsoncallback=1';
+
+fetchUrl(flickrUrl)
+.then((response) => {
+  response = JSON.parse(response);
+  console.log(response);
+});
