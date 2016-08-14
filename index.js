@@ -13,7 +13,6 @@ const {
   city,
   unit
 } = weatherApi;
-
 const weatherUrl = `${weatherApiBaseUrl}${city}&appid=${weatherApiKey}&units=${unit}`;
 
 const {
@@ -23,9 +22,8 @@ const {
   text,
   group_id,
   photos_per_page,
-  number_of_page,
+  number_of_page
 } = flickrApi;
-
 const flickrUrl = `${flickrApiBaseUrl}${method}&api_key=${flickrApiKey}&text=${text}&group_id=${group_id}&per_page=${photos_per_page}&${number_of_page}=1&format=json&nojsoncallback=1`;
 
 fetchUrl(weatherUrl)
