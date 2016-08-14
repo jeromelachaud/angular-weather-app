@@ -4,6 +4,8 @@ import {
   weatherApi
 } from './src/js/constants';
 const moment = require('moment');
+const svgSpriteInjector = require('./src/js/third-party/svg-sprite-injector.js');
+svgSpriteInjector(document.body);
 
 const {
   weatherApiKey,
