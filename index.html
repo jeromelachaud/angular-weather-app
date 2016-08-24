@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="app">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="/public/app.css">
+    <script type="text/javascript" src="/public/app.js"></script>
   </head>
   <body>
-    <div class="top-bar" id="app"></div>
+    <div class="top-bar" ng-controller="weatherController">
+      <h1>{{message}}</h1>
+    </div>
     <div class="footer"></div>
-    <script type="text/javascript" src="/public/app.js"></script>
   </body>
 </html>
