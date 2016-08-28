@@ -13,7 +13,7 @@
     "postbuild:css": "postcss --use autoprefixer -r public/app.css",
     "server": "live-server --host=localhost",
     "start": "npm run javascript & npm run watch:scss & npm run server",
-    "svg": "node src/node/svgstore.js"
+    "svg": "node src/js/lib/svgstore.js"
   },
   "devDependencies": {
     "angular": "^1.5.8",
