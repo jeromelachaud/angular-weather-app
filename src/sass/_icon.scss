@@ -1,0 +1,14 @@
+.icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  &__svg {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+}
