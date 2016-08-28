@@ -1,17 +1,57 @@
-.top-bar {
+.left-bar {
+  z-index: 2;
   position: fixed;
-  top:0; right: 0; bottom: 0; left: 0;
-  height: 2rem;
+  top: 0; bottom: 0; left:0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 0 0 0 1rem;
-  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 15rem;
+  padding: 1rem 0 0 0;
+  font-family: 'Droid Sans', sans-serif;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  &__city {
+    font-size: 2rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    min-width: 50%;
+    margin: 0 0 1rem 0;
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &__value {
+    font-size: 1.25rem;
+  }
+
+  &__data {
+    text-transform: capitalize;
+  }
+  &__main {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 0 1rem 0;
+    text-align: center;
+  }
 }
 
-.footer {
+.right-container {
   position: fixed;
-  right: 0rem; top: 12rem;
-  width: 10rem;
-  height: 10rem;
-  background-color: rgba(255, 255, 255, .85);
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  padding-left: 15rem;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/20/Coat_of_Arms_of_The_City_of_London.svg');
+  // background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0d/Grandes_Armes_de_Paris.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 33%;
+  background-color: lightblue;
 }
