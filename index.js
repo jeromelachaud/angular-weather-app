@@ -1,12 +1,14 @@
 import angular from 'angular';
 import { weatherController } from './src/js/weatherController';
+
+const svgSpriteInjector = require('./src/js/lib/svg-sprite-injector.js');
+const svgSpriteContainer = document.getElementById('svgSpriteContainer');
+svgSpriteInjector(svgSpriteContainer);
+
 const app = angular.module('app', [])
-app.controller('weatherController', ['$scope', weatherController])
-
-
-
-fetchUrl(flickrUrl)
-.then((response) => {
-  response = JSON.parse(response);
-  console.log(response);
-});
+  .filter('svgIcon', function ($sce) {
+    return function(svgIcon) {
+      return $sce.trustAsResourceUrl('#' + svgIcon);
+    };
+  });
+app.controller('weatherController', ['$scope','$http',weatherController]);
