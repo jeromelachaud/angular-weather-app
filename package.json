@@ -30,6 +30,7 @@
     "moment": "^2.14.1",
     "node-sass": "^3.8.0",
     "nodemon": "^1.10.0",
+    "normalize.css": "^4.2.0",
     "npm": "^3.10.6",
     "postcss-cli": "^2.5.2",
     "svgstore": "^1.1.0",
