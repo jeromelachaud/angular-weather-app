@@ -6,12 +6,49 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="/public/app.css">
-    <script type="text/javascript" src="/public/app.js"></script>
   </head>
   <body>
-    <div class="top-bar" ng-controller="weatherController">
-      <h1>{{message}}</h1>
+    <div id="svgSpriteContainer" data-svg-sprite="/public/sprites.svg" data-svg-sprite-revision="6"></div>
+    <div class="left-bar" ng-controller="weatherController">
+      <div class="left-bar__item">
+        <span class="left-bar__city">{{city}}</span>
+      </div>
+      <div class="left-bar__item">
+        <span class="left-bar__icon">
+          <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sunrise"></use></svg>
+        </span>
+        <span class="left-bar__value">{{sunrise}}</span>
+      </div>
+      <div class="left-bar__item">
+        <span class="left-bar__icon">
+          <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sunset"></use></svg>
+        </span>
+        <span class="left-bar__value">{{sunset}}</span>
+      </div>
+      <div class="left-bar__item">
+        <span class="left-bar__icon">
+          <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#humidity"></use></svg>
+        </span>
+        <span class="left-bar__value">{{humidity}}</span>
+      </div>
+      <div class="left-bar__item">
+        <span class="left-bar__icon">
+          <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#temperature"></use></svg>
+        </span>
+        <span class="left-bar__value">{{temperature}}</span>
+      </div>
+      <div class="left-bar__item">
+        <span class="left-bar__icon">
+          <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wind"></use></svg>
+        </span>
+        <span class="left-bar__value">{{wind}}</span>
+      </div>
+      <div class="left-bar__main">
+        <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ icon | svgIcon }}"></use></svg>
+        <span class="left-bar__data">{{description}}</span>
+      </div>
     </div>
-    <div class="footer"></div>
+    <div class="right-container"></div>
+    <script type="text/javascript" src="/public/app.js"></script>
   </body>
 </html>
