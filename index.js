@@ -1,8 +1,3 @@
-import {
-  flickrApi
-} from './src/js/constants';
-import { fetchUrl } from './src/js/fetchUrl';
-import moment from 'moment';
 import angular from 'angular';
 import { weatherController } from './src/js/weatherController';
 const app = angular.module('app', [])
