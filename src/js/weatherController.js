@@ -8,27 +8,35 @@ function weatherController($scope, $http) {
     unit:  'metric'
   };
 
-  const {
+  let {
     apiKey,
     baseUrl,
     city,
     unit
   } = weatherApi;
 
-  const weatherUrl = `${baseUrl}${city}&appid=${apiKey}&units=${unit}`;
+  let weatherUrl = `${baseUrl}${city}&appid=${apiKey}&units=${unit}`;
 
-  $http.get(weatherUrl)
-  .success((response) => {
-    $scope.city = response.name;
-    $scope.humidity = response.main.humidity;
-    $scope.temperature = Number((response.main.temp).toFixed(1));
-    $scope.wind = response.wind.speed;
-    $scope.description = response.weather[0].description;
-    $scope.main = response.weather[0].main;
-    $scope.icon = response.weather[0].icon;
-    $scope.sunrise = moment.parseZone(response.sys.sunrise * 1000).local().format('HH:mm');
-    $scope.sunset = moment.parseZone(response.sys.sunset * 1000).local().format('HH:mm');
-  });
+  function getResponse(weatherUrl) {
+    $http.get(weatherUrl)
+    .success((response) => {
+      $scope.city = response.name;
+      $scope.humidity = response.main.humidity;
+      $scope.temperature = Number((response.main.temp).toFixed(1));
+      $scope.wind = response.wind.speed;
+      $scope.description = response.weather[0].description;
+      $scope.main = response.weather[0].main;
+      $scope.icon = response.weather[0].icon;
+      $scope.sunrise = moment.parseZone(response.sys.sunrise * 1000).local().format('HH:mm');
+      $scope.sunset = moment.parseZone(response.sys.sunset * 1000).local().format('HH:mm');
+    });
+  }
+  getResponse(weatherUrl);
+
+  $scope.changeCity = function () {
+    let weatherUrl = `${baseUrl}${$scope.newCity}&appid=${apiKey}&units=${unit}`;
+    getResponse(weatherUrl);
+  };
 }
 
 export { weatherController };
