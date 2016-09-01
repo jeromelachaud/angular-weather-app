@@ -26,6 +26,7 @@ var sprites = svgstore()
 .add('sunrise', fs.readFileSync('./src/svg/sunrise.svg', 'utf8'))
 .add('sunset', fs.readFileSync('./src/svg/sunset.svg', 'utf8'))
 .add('temperature', fs.readFileSync('./src/svg/temperature.svg', 'utf8'))
-.add('wind', fs.readFileSync('./src/svg/wind.svg', 'utf8'));
+.add('wind', fs.readFileSync('./src/svg/wind.svg', 'utf8'))
+.add('search', fs.readFileSync('./src/svg/search.svg', 'utf8'));
 
 fs.writeFileSync('./public/sprites.svg', sprites);
