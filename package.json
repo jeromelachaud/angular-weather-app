@@ -1,7 +1,7 @@
 {
   "name": "micro-front-end-scaffold",
   "version": "1.0.0",
-  "description": "micro-front-end-scaffold",
+  "description": "angular-weather-app",
   "main": "index.js",
   "author": "Jerome Lachaud",
   "email": "jerome.lachaud@gmail.com",
@@ -13,8 +13,8 @@
     "postbuild:css": "postcss --use autoprefixer -r public/app.css",
     "server": "live-server --host=localhost",
     "presvg": "mkdirp ./public",
-    "start": "npm run svg && npm run watch:scss & npm run javascript & npm run server",
-    "svg": "node src/js/lib/svgstore.js"
+    "svg": "node src/js/lib/svgstore.js",
+    "start": "npm run svg && npm run watch:scss & npm run javascript & npm run server"
   },
   "devDependencies": {
     "angular": "^1.5.8",
@@ -30,7 +30,6 @@
     "node-sass": "^3.8.0",
     "nodemon": "^1.10.0",
     "normalize.css": "^4.2.0",
-    "npm": "^3.10.6",
     "postcss-cli": "^2.5.2",
     "svgstore": "^1.1.0",
     "watchify": "^3.7.0"
