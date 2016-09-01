@@ -39,10 +39,11 @@ function weatherController($scope, $http) {
   };
 
   const searchButton = document.getElementById('searchButton');
-  const searchForm = document.getElementById('searchForm');
-  searchButton.addEventListener('click', () => searchForm.classList.remove('search-form--hidden'))
   const closeButton = document.getElementById('closeButton');
-  closeButton.addEventListener('click', () => searchForm.classList.add('search-form--hidden'))
+  const searchFormContainer = document.getElementById('searchFormContainer');
+
+  searchButton.addEventListener('click', () => searchFormContainer.classList.remove('search-form-container--hidden'));
+  closeButton.addEventListener('click', () => searchFormContainer.classList.add('search-form-container--hidden'));
 }
 
 export { weatherController };
