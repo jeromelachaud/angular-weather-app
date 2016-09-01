@@ -41,9 +41,11 @@ function weatherController($scope, $http) {
   const searchButton = document.getElementById('searchButton');
   const closeButton = document.getElementById('closeButton');
   const searchFormContainer = document.getElementById('searchFormContainer');
+  const changeCityForm = document.getElementById('changeCityForm');
 
   searchButton.addEventListener('click', () => searchFormContainer.classList.remove('search-form-container--hidden'));
   closeButton.addEventListener('click', () => searchFormContainer.classList.add('search-form-container--hidden'));
+  changeCityForm.addEventListener('submit', () => searchFormContainer.classList.add('search-form-container--hidden'));
 }
 
 export { weatherController };
