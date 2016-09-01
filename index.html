@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="/public/app.css">
   </head>
-  <body>
+  <body ng-controller="weatherController">
     <div id="svgSpriteContainer" data-svg-sprite="/public/sprites.svg" data-svg-sprite-revision="6"></div>
-    <div class="left-bar" ng-controller="weatherController">
+    <div class="left-bar">
       <div class="left-bar__item">
         <span class="left-bar__city">{{city}}</span>
       </div>
