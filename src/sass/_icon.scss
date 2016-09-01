@@ -11,4 +11,8 @@
     height: 100%;
     pointer-events: none;
   }
+
+  &--faded {
+    fill: rgba(255,255,255,.5);
+  }
 }
