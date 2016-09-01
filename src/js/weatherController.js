@@ -37,6 +37,12 @@ function weatherController($scope, $http) {
     let weatherUrl = `${baseUrl}${$scope.newCity}&appid=${apiKey}&units=${unit}`;
     getResponse(weatherUrl);
   };
+
+  const searchButton = document.getElementById('searchButton');
+  const searchForm = document.getElementById('searchForm');
+  searchButton.addEventListener('click', () => searchForm.classList.remove('search-form--hidden'))
+  const closeButton = document.getElementById('closeButton');
+  closeButton.addEventListener('click', () => searchForm.classList.add('search-form--hidden'))
 }
 
 export { weatherController };

@@ -52,11 +52,14 @@
         <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ icon | svgIcon }}"></use></svg>
         <span class="left-bar__data">{{description}}</span>
       </div>
-      <div>
-        <form ng-submit="changeCity()">
-          <input type="text" ng-model="newCity">
-        </form>
+    </div>
+    <div id="searchForm" class="search-form search-form--hidden">
+      <div class="search-form__close-button">
+        <button id="closeButton">close</button>
       </div>
+      <form id="form" class="search-form__form" ng-submit="changeCity()">
+        <input class="search-form__input" type="text" ng-model="newCity" autofocus>
+      </form>
     </div>
     <div class="right-container">
       <svg class="icon__svg icon--faded" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ icon | svgIcon }}"></use></svg>
