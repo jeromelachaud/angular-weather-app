@@ -42,8 +42,16 @@ function weatherController($scope, $http) {
   const closeButton = document.getElementById('closeButton');
   const searchFormContainer = document.getElementById('searchFormContainer');
   const changeCityForm = document.getElementById('changeCityForm');
+  const formInput = document.getElementById('formInput');
 
   searchButton.addEventListener('click', () => searchFormContainer.classList.remove('search-form-container--hidden'));
+
+  const onClickSearchDomManipulations = function() {
+    searchFormContainer.classList.remove('search-form-container--hidden');
+    formInput.focus();
+  };
+
+  searchButton.addEventListener('click', () => onClickSearchDomManipulations());
   closeButton.addEventListener('click', () => searchFormContainer.classList.add('search-form-container--hidden'));
   changeCityForm.addEventListener('submit', () => searchFormContainer.classList.add('search-form-container--hidden'));
 }
