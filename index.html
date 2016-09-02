@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="/public/app.css">
   </head>
-  <body ng-controller="weatherController">
+  <body>
     <div id="svgSpriteContainer" data-svg-sprite="/public/sprites.svg"></div>
-    <div class="left-bar">
+    <div class="left-bar" ng-controller="weatherController">
       <div class="left-bar__item">
         <span class="left-bar__city">{{city}}</span>
         <button id="searchButton" class="left-bar__search">
@@ -53,7 +53,7 @@
         <span class="left-bar__data">{{description}}</span>
       </div>
     </div>
-    <div id="searchFormContainer" class="search-form-container search-form-container--hidden">
+    <div id="searchFormContainer" class="search-form-container search-form-container--hidden" ng-controller="weatherController">
       <div class="search-form-container__close-button-container">
         <button id="closeButton" class="search-form-container__close-button-icon">
           <span>
@@ -65,8 +65,10 @@
         <input id="formInput" class="search-form-container__input" type="text" ng-model="newCity">
       </form>
     </div>
-    <div class="right-container">
-      <svg class="icon__svg icon--faded" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ icon | svgIcon }}"></use></svg>
+    <div ng-controller="flickrController">
+      <div class="right-container" ng-controller="weatherController">
+        <svg class="icon__svg icon--faded" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ icon | svgIcon }}"></use></svg>
+      </div>
     </div>
     <script type="text/javascript" src="/public/app.js"></script>
   </body>
