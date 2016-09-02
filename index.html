@@ -54,8 +54,12 @@
       </div>
     </div>
     <div id="searchFormContainer" class="search-form-container search-form-container--hidden">
-      <div class="search-form-container__close-button">
-        <button id="closeButton">close</button>
+      <div class="search-form-container__close-button-container">
+        <button id="closeButton" class="search-form-container__close-button-icon">
+          <span>
+            <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg>
+          </span>
+        </button>
       </div>
       <form id="changeCityForm" class="search-form-container__form" ng-submit="changeCity()">
         <input class="search-form-container__input" type="text" ng-model="newCity" autofocus>
