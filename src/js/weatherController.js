@@ -1,12 +1,6 @@
 import moment from 'moment';
 
-function weatherController($scope, $http) {
-  const weatherApi = {
-    apiKey: '0574fdb7238ef696712ccd89746bb0e0',
-    baseUrl: 'http://api.openweathermap.org/data/2.5/weather?q=',
-    city: 'London,uk',
-    unit:  'metric'
-  };
+function weatherController($scope, $http, weatherApi, formDataFactory) {
 
   let {
     apiKey,
