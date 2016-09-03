@@ -27,8 +27,9 @@ function weatherController($scope, $http, weatherApi, formDataFactory) {
   }
   getResponse(weatherUrl);
 
+  $scope.formDataFactory = formDataFactory;
   $scope.changeCity = function () {
-    let weatherUrl = `${baseUrl}${$scope.newCity}&appid=${apiKey}&units=${unit}`;
+    let weatherUrl = `${baseUrl}${formDataFactory.newCity}&appid=${apiKey}&units=${unit}`;
     getResponse(weatherUrl);
   };
 
