@@ -9,65 +9,66 @@
   </head>
   <body>
     <div id="svgSpriteContainer" data-svg-sprite="/public/sprites.svg"></div>
-    <div class="left-bar" ng-controller="weatherController">
-      <div class="left-bar__item">
-        <span class="left-bar__city">{{city}}</span>
-        <button id="searchButton" class="left-bar__search">
-          <span>
-            <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use></svg>
+    <div ng-controller="weatherController">
+      <div class="left-bar">
+        <div class="left-bar__item">
+          <span class="left-bar__city">{{city}}</span>
+          <button id="searchButton" class="left-bar__search">
+            <span>
+              <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use></svg>
+            </span>
+          </button>
+        </div>
+        <div class="left-bar__item">
+          <span class="left-bar__icon">
+            <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sunrise"></use></svg>
           </span>
-        </button>
-      </div>
-      <div class="left-bar__item">
-        <span class="left-bar__icon">
-          <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sunrise"></use></svg>
-        </span>
-        <span class="left-bar__value">{{sunrise}}</span>
-      </div>
-      <div class="left-bar__item">
-        <span class="left-bar__icon">
-          <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sunset"></use></svg>
-        </span>
-        <span class="left-bar__value">{{sunset}}</span>
-      </div>
-      <div class="left-bar__item">
-        <span class="left-bar__icon">
-          <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#humidity"></use></svg>
-        </span>
-        <span class="left-bar__value">{{humidity}}</span>
-      </div>
-      <div class="left-bar__item">
-        <span class="left-bar__icon">
-          <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#temperature"></use></svg>
-        </span>
-        <span class="left-bar__value">{{temperature}}</span>
-      </div>
-      <div class="left-bar__item">
-        <span class="left-bar__icon">
-          <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wind"></use></svg>
-        </span>
-        <span class="left-bar__value">{{wind}}</span>
-      </div>
-      <div class="left-bar__main">
-        <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ icon | svgIcon }}"></use></svg>
-        <span class="left-bar__data">{{description}}</span>
-      </div>
-    </div>
-    <div id="searchFormContainer" class="search-form-container search-form-container--hidden" ng-controller="weatherController">
-      <div class="search-form-container__close-button-container">
-        <button id="closeButton" class="search-form-container__close-button-icon">
-          <span>
-            <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg>
+          <span class="left-bar__value">{{sunrise}}</span>
+        </div>
+        <div class="left-bar__item">
+          <span class="left-bar__icon">
+            <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sunset"></use></svg>
           </span>
-        </button>
+          <span class="left-bar__value">{{sunset}}</span>
+        </div>
+        <div class="left-bar__item">
+          <span class="left-bar__icon">
+            <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#humidity"></use></svg>
+          </span>
+          <span class="left-bar__value">{{humidity}}</span>
+        </div>
+        <div class="left-bar__item">
+          <span class="left-bar__icon">
+            <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#temperature"></use></svg>
+          </span>
+          <span class="left-bar__value">{{temperature}}</span>
+        </div>
+        <div class="left-bar__item">
+          <span class="left-bar__icon">
+            <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wind"></use></svg>
+          </span>
+          <span class="left-bar__value">{{wind}}</span>
+        </div>
+        <div class="left-bar__main">
+          <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ icon | svgIcon }}"></use></svg>
+          <span class="left-bar__data">{{description}}</span>
+        </div>
       </div>
-      <form id="changeCityForm" class="search-form-container__form" ng-submit="changeCity()">
+      <div id="searchFormContainer" class="search-form-container search-form-container--hidden">
+        <div class="search-form-container__close-button-container">
+          <button id="closeButton" class="search-form-container__close-button-icon">
+            <span>
+              <svg class="icon__svg" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg>
+            </span>
+          </button>
+        </div>
+        <form id="changeCityForm" class="search-form-container__form" ng-submit="changeCity()">
           <input id="formInput" class="search-form-container__input" type="text" ng-model="formDataFactory.newCity">
-      </form>
-    </div>
-    <div ng-controller="flickrController">
-      <div class="right-container" ng-controller="weatherController">
+        </form>
+      </div>
+      <div class="right-container">
         <svg class="icon__svg icon--faded" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ icon | svgIcon }}"></use></svg>
+        <img ng-controller="flickrController" src="https://farm{{farmId}}.staticflickr.com/{{serverId}}/{{photoId}}_{{secret}}.jpg" style="position:absolute"/>
       </div>
     </div>
     <script type="text/javascript" src="/public/app.js"></script>
