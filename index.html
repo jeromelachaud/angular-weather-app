@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="/public/app.css">
   </head>
-  <body ng-controller="weatherController">
+  <body  ng-controller="weatherController">
     <div id="svgSpriteContainer" data-svg-sprite="/public/sprites.svg"></div>
     <div class="left-bar">
       <div class="left-bar__item">
@@ -65,7 +65,7 @@
         <input id="formInput" class="search-form-container__input" type="text" ng-model="newCity">
       </form>
     </div>
-    <div class="right-container">
+    <div class="right-container" style="background-image:url('{{ image_url }}')" alt="">
       <svg class="icon__svg icon--faded" focusable="false"><use class="icon__use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ icon | svgIcon }}"></use></svg>
     </div>
     <script type="text/javascript" src="/public/app.js"></script>
