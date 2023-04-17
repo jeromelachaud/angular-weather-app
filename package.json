@@ -30,7 +30,7 @@
     "node-sass": "^3.8.0",
     "nodemon": "^3.0.1",
     "normalize.css": "^4.2.0",
-    "postcss-cli": "^2.5.2",
+    "postcss-cli": "^10.1.0",
     "svgstore": "^1.1.0",
     "watchify": "^3.7.0"
   }
