@@ -32,6 +32,6 @@
     "normalize.css": "^4.2.0",
     "postcss-cli": "^2.5.2",
     "svgstore": "^1.1.0",
-    "watchify": "^3.7.0"
+    "watchify": "^4.0.0"
   }
 }
